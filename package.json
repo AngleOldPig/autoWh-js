@@ -1,0 +1,24 @@
+{
+  "name": "autowh",
+  "version": "1.0.0",
+  "description": "oldpig's first try",
+  "main": "./app/main.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "start": "electron .",
+    "build": "npm run build-win",
+    "build-win": "electron-packager . --asar --overwrite --out=build --icon=icons/Icon.ico",
+    "test": "echo \"no test for now\" && exit 1"
+  },
+  "author": "OldPig",
+  "license": "GNU",
+  "dependencies": {
+    "electron": "^10.1.2",
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "devDependencies": {
+    "electron-winstaller": "^4.0.1"
+  }
+}

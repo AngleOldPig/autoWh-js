@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" 
+              content="
+                default-src 'self';
+                script-src 'self' 'unsafe-inline';
+                connect-src *
+              " 
+    >
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>autoWh-js试制版</title>
+  </head>
+  <body>
+    <h1>autoWh-js试制版</h1>
+    <h2> --OldPig 2020.9.27</h2>
+    <br/>
+    <div class="error-message"></div>
+
+    <!--输入信息区域-->
+    <section class="add-new-project">
+      <form class="add-new-project-form">
+        文件名：
+        <input type="text" class="project-name" placeholder="不包括后缀" size="40"><br/><br/>
+        选择模式： 
+        <input type="number" class="project-mode" placeholder="只填写数字" size="20"><br/><br/>
+        结果后缀： 
+        <input type="text" class="result-name" placeholder="默认为“-sorted”" size="20"><br/><br/>
+        <!--提交按钮需要以上内容都填写齐全-->
+        <br/>
+        <input type="submit" class="submit-button" value="生成汇总" disabled><br/><br/>
+      </form>
+    </section>
+
+    <!--在控制区域添加一个按钮-->
+    <section class="controls">
+      <!--button class="clear-button">清空</button-->
+    </section>
+    <script>
+      // 使用Node的require函数
+      // 将外部JS模块加载到渲染器进程中
+      require('./renderer');
+    </script>
+  </body>
+</html>

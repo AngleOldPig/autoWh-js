@@ -1,0 +1,19 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/*使用运行页面的操作系统默认系统字体*/
+/*Chromium特有功能，使electron应用与原生桌面应用外观保持一致*/
+body, input {
+    font: menu;
+}
+
+/*按钮居中*/
+.submit-button {
+    display: block;
+    margin: 0 auto;
+}
